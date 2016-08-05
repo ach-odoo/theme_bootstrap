@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <template id="website_theme_superhero.theme_superhero" name="SuperHero" inherit_id="website.theme" active="False" customize_show="True">
+        <xpath expr="//link[@id='bootstrap_css']" position="replace">
+            <link rel='stylesheet' href='/website_theme_superhero/static/src/css/superhero.min.css' t_ignore="true"/>
+            <link rel='stylesheet' href='/website_theme_superhero/static/src/css/superhero.fix.css' t_ignore="true"/>
+        </xpath>
+    </template>
+
+    <template id="theme" name="Themes" inherit_id="website.themes">
+        <xpath expr="//div[@id='themes-list']" position="inside">
+            <div class="col-md-4">
+                <div class="well text-center">
+                  <div class="image">
+                    <img class="img-responsive" src="/website_theme_superhero/static/src/img/superhero.png" alt="SuperHero"/>
+                  </div>
+                  <div class="options">
+                    <h3>SuperHero</h3>
+                    <p>blabla</p>
+                    <a class="btn btn-info" href="/website/theme_change?theme_id=website_theme_superhero.theme_superhero">Apply</a>
+                  </div>
+                </div>
+              </div>
+        </xpath>
+    </template>
+</data>
+</openerp>
